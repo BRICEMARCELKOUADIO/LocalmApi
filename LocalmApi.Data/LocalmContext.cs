@@ -16,6 +16,11 @@ namespace LocalmApi.Data
         public DbSet<LocationType> LocationTypes { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderProduct> OrderProducts { get; set; }
+        public DbSet<Login> Logins { get; set; }
+        public DbSet<Mark> Marks { get; set; }
+        public DbSet<Model> Models { get; set; }
+        public DbSet<TypeUser> TypeUsers { get; set; }
+        public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = Locam_Bd");
@@ -31,6 +36,11 @@ namespace LocalmApi.Data
             modelBuilder.Entity<LocationType>().ToTable("LocationType");
             modelBuilder.Entity<Order>().ToTable("Order");
             modelBuilder.Entity<OrderProduct>().ToTable("OrderProduct");
+            modelBuilder.Entity<Login>().ToTable("Login");
+            modelBuilder.Entity<Mark>().ToTable("Mark");
+            modelBuilder.Entity<Model>().ToTable("Model");
+            modelBuilder.Entity<TypeUser>().ToTable("TypeUser");
+            modelBuilder.Entity<User>().ToTable("User");
         }
     }
 }

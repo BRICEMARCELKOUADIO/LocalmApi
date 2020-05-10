@@ -11,6 +11,7 @@ namespace LocalmApi.Domaine
         public string Desciption { get; set; }
         public string UserProductReference { get; set; }
         public int ProductCategoryId { get; set; }
+        public int ModelId { get; set; }
         public ICollection<ProductImage> ProductImages { get; set; }
     }
 }
